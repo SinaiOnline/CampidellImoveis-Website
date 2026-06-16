@@ -25,7 +25,7 @@ const NavbarDrawer = () => {
         aria-label="Open menu"
         onClick={() => toggle(true)}
         size="large"
-        color="inherit"
+        sx={{color: "white"}}
         className="sandwich"
       >
         <Menu fontSize="large" />
@@ -54,7 +54,7 @@ const NavbarDrawer = () => {
                         fontWeight: "400",
                         textTransform: "uppercase",
                         "&:hover": {
-                          color: "var(--secondary-color)",
+                          color: "white",
                           textDecoration: "underline",
                         },
                       }}
@@ -74,7 +74,7 @@ const NavbarDrawer = () => {
                           fontWeight: "400",
                           textTransform: "uppercase",
                           "&:hover": {
-                            color: "var(--secondary-color)",
+                            color: "white",
                             textDecoration: "underline",
                           },
                         }}

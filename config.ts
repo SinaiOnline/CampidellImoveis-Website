@@ -4,32 +4,34 @@ import {
 } from "./types/property-offer-type";
 
 const siteConfig: SiteConfig = {
-    code: 4268,
-    name: "Sandro Weslley Negócios Imobiliários",
-    address: ["Rua Dr. Michael Hannas, nº 50, Bairro Vale Verde, em Manhuaçu"],
-    websiteDomain: "https://sandroweslleyimoveis.com.br",
+    code: 4270,
+    creci: "33240",
+    name: "Campidell Imóveis",
+    address: ["Rua treze de junho, N°209"],
+    websiteDomain: "https://campidellimoveis.netlify.app",
     darkLogo: "/logo/logo-dark.webp",
     lightLogo: "/logo/logo-light.webp",
     header: {
-        title: "Aqui você encontra o imóvel perfeito para você!",
+        title: "Transformando sonhos em endereços reais",
         subtitle: "",
         backgroundVideo: "/banner.mp4",
     },
     emails: [
         {
-            address: "sandroweslley@gmail.com",
+            address: "contato@miriancampidell.com.br",
         },
     ],
     phoneNumbers: [
         {
-            number: "(33) 98851-8300",
+            number: "(37) 99952-0291",
         },
     ],
     whatsapp: [
         {
-            number: "(33) 98851-8300",
+            number: "(37) 99952-0291",
         },
     ],
+    instagram: "@mirian_campidell",
     supportedOfferTypes: "VENDA_E_ALUGUEL",
     defaultOfferType: "VENDA",
     overlayPhotosWithWatermark: false,

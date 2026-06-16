@@ -260,7 +260,7 @@ const Contato = () => {
                     </Grid>
                   </Grid>
                   <Typography
-                    sx={{ marginTop: "20px", color: "var(--primary-color)" }}
+                    sx={{ marginTop: "20px" }}
                   >
                     * Campos obrigatórios
                   </Typography>

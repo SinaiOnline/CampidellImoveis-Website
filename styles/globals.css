@@ -2,7 +2,7 @@
   --background: 255, 255, 255;
   --card-background: 223, 223, 223;
   --primary: var(--card-background);
-  --secondary: 231, 69, 28;
+  --secondary: 2, 36, 7;
   --success: 76, 175, 80;
   --error: 244, 67, 54;
   --background-color: rgb(var(--background));
@@ -45,6 +45,12 @@ body {
   background-color: var(--background-color);
   color: black;
   padding-right: 0 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-poppins), sans-serif;
 }
 
 h1,
@@ -93,12 +99,6 @@ h5 {
 
 h6 {
   font-size: 1.13rem;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-poppins), sans-serif;
 }
 
 #layout #navbar {

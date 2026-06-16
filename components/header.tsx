@@ -39,7 +39,7 @@ const Header = () => {
           <div className="title-container">
             {siteConfig.header.title && (
               <h1>
-                <span className="title">{siteConfig.header.title}</span>
+                {siteConfig.header.title}
                 <span className="subtitle">{siteConfig.header.subtitle}</span>
               </h1>
             )}
