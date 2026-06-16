@@ -42,7 +42,7 @@ const announcementTypeOptionLabelValue: Record<PropertyOfferTypes, string> = {
 
 const announcementTypeOptions: PropertyOfferTypes[] =
   siteConfig.supportedOfferTypes === "VENDA_E_ALUGUEL"
-    ? ["VENDA", "ALUGUEL"]
+    ? ["VENDA", "ALUGUEL", "VENDA_E_ALUGUEL"]
     : [siteConfig.supportedOfferTypes];
 
 const AnuncieSeuImovel: React.FC = () => {
