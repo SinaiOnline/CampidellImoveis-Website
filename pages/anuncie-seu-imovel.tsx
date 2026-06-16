@@ -4,6 +4,7 @@ import { Alert, Button, Container, Grid, MenuItem, TextField } from '@mui/materi
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 
 import * as PropertyAnnouncementService from '@/services/property-announcement';
+import { PropertyOfferTypes } from '@/types/property-offer-type';
 
 interface FormData {
   nome: string;
@@ -33,27 +34,23 @@ interface FormErrors {
   complemento?: string;
 }
 
-const announcementTypeOptions = siteConfig.supportedOfferTypes === "VENDA_E_ALUGUEL"
-? [
-    { value: "VENDA", label: "Venda" },
-    { value: "ALUGUEL", label: "Aluguel" },
-  ]
-: [
-    {
-      value: siteConfig.supportedOfferTypes,
-      label:
-        siteConfig.supportedOfferTypes === "VENDA"
-          ? "Venda"
-          : "Aluguel",
-    },
-  ];
+const announcementTypeOptionLabelValue: Record<PropertyOfferTypes, string> = {
+  VENDA: "Venda",
+  ALUGUEL: "Aluguel",
+  VENDA_E_ALUGUEL: "Venda e Aluguel",
+};
+
+const announcementTypeOptions: PropertyOfferTypes[] =
+  siteConfig.supportedOfferTypes === "VENDA_E_ALUGUEL"
+    ? ["VENDA", "ALUGUEL"]
+    : [siteConfig.supportedOfferTypes];
 
 const AnuncieSeuImovel: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     nome: '',
     telefone: '',
     email: '',
-    finalidade: 'Venda',
+    finalidade: announcementTypeOptionLabelValue[announcementTypeOptions[0]],
     cep: '',
     bairro: '',
     cidade: '',
@@ -180,9 +177,9 @@ const AnuncieSeuImovel: React.FC = () => {
               helperText={errors.finalidade}              
             >
               {
-                announcementTypeOptions.map((option) => (
-                  <MenuItem key={option.value} value={option.value}>
-                    {option.label}
+                announcementTypeOptions.map((type) => (
+                  <MenuItem key={announcementTypeOptionLabelValue[type]} value={announcementTypeOptionLabelValue[type]}>
+                    {announcementTypeOptionLabelValue[type]}
                   </MenuItem>
                 ))
               }
