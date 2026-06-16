@@ -33,6 +33,21 @@ interface FormErrors {
   complemento?: string;
 }
 
+const announcementTypeOptions = siteConfig.supportedOfferTypes === "VENDA_E_ALUGUEL"
+? [
+    { value: "VENDA", label: "Venda" },
+    { value: "ALUGUEL", label: "Aluguel" },
+  ]
+: [
+    {
+      value: siteConfig.supportedOfferTypes,
+      label:
+        siteConfig.supportedOfferTypes === "VENDA"
+          ? "Venda"
+          : "Aluguel",
+    },
+  ];
+
 const AnuncieSeuImovel: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     nome: '',
@@ -164,7 +179,13 @@ const AnuncieSeuImovel: React.FC = () => {
               error={!!errors.finalidade}
               helperText={errors.finalidade}              
             >
-              <MenuItem value="Venda">Venda</MenuItem>
+              {
+                announcementTypeOptions.map((option) => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))
+              }
             </TextField>
           </div>
 
