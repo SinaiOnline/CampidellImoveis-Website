@@ -8,7 +8,7 @@ const siteConfig: SiteConfig = {
     creci: "33240",
     name: "Campidell Imóveis",
     address: ["Rua treze de junho, N°209"],
-    websiteDomain: "https://campidellimoveis.netlify.app",
+    websiteDomain: "https://campidellimoveis.com.br",
     darkLogo: "/logo/logo-dark.webp",
     lightLogo: "/logo/logo-light.webp",
     header: {
